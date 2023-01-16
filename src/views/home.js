@@ -11,7 +11,7 @@ export default () => `
 `;
 
 export const homeScript = () => {
-    const URL = "http://43.201.103.199";
+    const URL = window.location.hostname === "127.0.0.1" ? "http://43.201.103.199" : "/proxy";
     const $list = document.querySelector(".list");
 
     fetch(`${URL}/posts`, {

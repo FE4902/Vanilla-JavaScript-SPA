@@ -41,7 +41,7 @@ export const writeScript = () => {
     });
 
     $submitButton.addEventListener("click", () => {
-        const URL = "http://43.201.103.199";
+        const URL = window.location.hostname === "127.0.0.1" ? "http://43.201.103.199" : "/proxy";
         const inputValue = $input.value;
         const textareaValue = $textarea.value;
         const data = { title: inputValue, content: textareaValue, image: imageURL };
